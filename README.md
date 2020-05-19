@@ -58,7 +58,7 @@ First, I read the descriptive activity label names dataset provided in the downl
 activity_label_names <- read.table("./UCI HAR Dataset/activity_labels.txt", header = FALSE)
 
 Then, I extracted names from second column of activity labels dataset and stored in a character vector
-# removing curl brackets, '-'......activity_label_names <- as.character(activity_label_names[,2])
+activity_label_names <- as.character(activity_label_names[,2])
 
 Finally, I assigned the descriptive activity label names to activity column in subset data set
 sub_total_data$activity <- activity_label_names[sub_total_data$activity]
